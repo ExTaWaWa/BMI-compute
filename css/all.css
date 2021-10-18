@@ -1,0 +1,300 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #424242;
+}
+
+header .logo {
+  width: 117px;
+  height: 117px;
+}
+
+header .personal_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffd366;
+  font-family: "Noto Sans TC", sans-serif;
+  padding: 0 100px 0 100px;
+}
+
+header label {
+  margin-bottom: 5px;
+}
+
+header input {
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 3px solid #ffd366;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #8b8888;
+}
+
+header .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .send {
+  width: 120px;
+  height: 120px;
+  background: #ffd366;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #424242;
+  display: none;
+}
+
+header .send:hover {
+  background: #ffc430;
+}
+
+header .detail {
+  width: 120px;
+  height: 120px;
+  background: #424242;
+  border: 6px solid;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+header .detail .showBMI {
+  position: relative;
+}
+
+header .detail .showBMI .BMI_num {
+  font-size: 32px;
+}
+
+header .detail .showBMI .restart {
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 5px solid #424242;
+  background: currentColor;
+}
+
+header .detail .showBMI .restart > img {
+  padding-bottom: 6px;
+}
+
+header .detail .showBMI .BMI_level {
+  position: absolute;
+  left: 130px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: 20px;
+}
+
+header .bgColorG {
+  color: #86D73F;
+}
+
+header .bgColorB {
+  color: #31BAF9;
+}
+
+header .bgColorO {
+  color: #FF982D;
+}
+
+header .bgColorOO {
+  color: #FF6C03;
+}
+
+header .bgColorR {
+  color: #FF1200;
+}
+
+.content {
+  padding: 50px 0;
+}
+
+footer {
+  background: #ffd366;
+  padding: 40px 0;
+}
+/*# sourceMappingURL=all.css.map */
