@@ -12,22 +12,16 @@ function inputBMI() {
   const kg = weight.value;
   const bmi = Math.round((kg / ((cm / 100) * (cm / 100)) * 100)) / 100;
   const today = new Date();
-<<<<<<< Updated upstream
-  const date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + (today.getDate());
-
-  let str = {};
-  console.log(typeof kg);
-
-  if (!cm || !kg) {
-    alert('請輸入數值');
-    return
-  }
-=======
   const date = today.getFullYear()+ "-" + (today.getMonth()+1) + "-" + (today.getDate());
   
   let BMI_level = "";
   let bgColor = "";
   let bdrColor = "";
+
+  if (!cm || !kg) {
+    alert('請輸入數值！');
+    return
+  }
 
   if (bmi < 18.5) {
     BMI_level = '體重過輕';
@@ -66,7 +60,6 @@ function inputBMI() {
 
   localStorage.setItem('list',JSON.stringify(data));
   console.log(data);
->>>>>>> Stashed changes
   
 
 }
