@@ -17,18 +17,19 @@ html(lang="en")
           label(for="weight")  體重kg
           input#weight(type="number" )
         .result
-          button.detail.bgColorG 
-            .showBMI 
-              .BMI_num 20.51
-              .BMI BMI
-              .restart  
-                img.bgColorG(src="https://upload.cc/i1/2021/07/29/YynqD8.png", alt="")
-              .BMI_level 理想
+          //- button.detail.bgColorG 
+          //-   .showBMI 
+          //-     .BMI_num 20.51
+          //-     .BMI BMI
+          //-     .restart  
+          //-       img(src="https://upload.cc/i1/2021/07/29/YynqD8.png", alt="")
+          //-     .BMI_level 理想
           button.send 看結果
     .content 
       .container
         .localData 
           h2.title BMI記錄
+          button.clear 全部清除
           ul.list
             li.bdrColorG 
               h3 理想
@@ -45,4 +46,4 @@ html(lang="en")
         .logo_footer
           img(src="https://upload.cc/i1/2021/08/07/s4GvXC.png", alt="") 
 
-    script(src="js/main.js") 
+    script(src="js/main.js" defer) 
