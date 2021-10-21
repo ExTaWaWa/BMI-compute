@@ -187,6 +187,11 @@ header {
     border-radius: 5px;
     color: #fff;
     background-color: #8b8888;
+
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+      appearance: none;
+    }
   }
 
   .result {
@@ -341,7 +346,7 @@ header {
     width: 80px;
     height: 62px;
     border: 0;
-    background: rgba(238, 34, 68, .8);
+    background: rgba(238, 34, 68, 0.8);
     color: white;
 
     &:hover {

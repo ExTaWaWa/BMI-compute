@@ -6,16 +6,23 @@ const restart = document.querySelector('.restart');
 
 const data = [] || JSON.parse(localStorage.getItem("data"));
 
-function inputBMI(){
+function inputBMI() {
   const cm = height.value;
   const kg = weight.value;
-  const bmi = Math.round((kg/((cm/100)*(cm/100))*100))/100;
+  const bmi = Math.round((kg / ((cm / 100) * (cm / 100)) * 100)) / 100;
   const today = new Date();
-  const date = today.getFullYear()+ "-" + (today.getMonth()+1) + "-" + (today.getDate());
-  
+  const date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + (today.getDate());
+
   let str = {};
+  console.log(typeof kg);
+
+  if (!cm || !kg) {
+    alert('請輸入數值');
+    return
+  }
+  
 
 }
 
 // restart.addEventListener('click' ,);
-// send.addEventListener('click' ,);
+send.addEventListener('click', inputBMI);

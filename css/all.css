@@ -206,6 +206,11 @@ header input {
   background-color: #8b8888;
 }
 
+header input[type="number"]::-webkit-outer-spin-button, header input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
 header .result {
   display: -webkit-box;
   display: -ms-flexbox;
