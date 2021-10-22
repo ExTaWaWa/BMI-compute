@@ -7,9 +7,10 @@ const clear = document.querySelector('.clear');
 const list = document.querySelector('.list');
 
 //不可以放反，放反會變空陣列
+// 讀取 LocalStorage 的資料，沒有就空陣列
 let data = JSON.parse(localStorage.getItem("list")) || [];
 
-//這個刷新要緊接 const data 後面，不能放最後不然一樣不會跑東西出來
+//這個刷新要緊接 data 後面，不能放最後不然一樣不會跑東西出來
 showList();
 // console.log(data);
 
@@ -25,11 +26,13 @@ function inputBMI() {
   let bgColor = "";
   let bdrColor = "";
 
+  // 如果沒有數值報錯
   if (!cm || !kg) {
     alert('請輸入數值！');
     return
   }
 
+  // 判定 BMI 數值
   if (bmi < 18.5) {
     BMI_level = '體重過輕';
     bgColor = 'bgColorB';
@@ -84,6 +87,7 @@ function showList() {
   let str = '';
   let detail = JSON.parse(localStorage.getItem("list"));
 
+// 判斷 localStorage 抓到的資料有沒有抓到，不是空的
   if (detail !== null) {
     let len = detail.length;
     for (let i = 0; i < len; i++) {
@@ -99,7 +103,7 @@ function showList() {
     }
   }
 
-
+// 判斷 str 是不是空的來決定動作
   if (str === '' || str === null) {
     clear.classList.add("hide");
     list.textContent = "還沒有輸入數值";
@@ -111,7 +115,7 @@ function showList() {
   // console.log(data);
 }
 
-// 刷新按鈕
+// 刷新按鈕，顯示 BMI 資訊與 BMI等級燈號
 function showresult(data) {
   let str = '';
   str = `
@@ -128,6 +132,7 @@ function showresult(data) {
 
 }
 
+// 刪除單筆資料
 function deleteData(e) {
   let num = e.target.dataset.num;
   let name = e.target.nodeName;
@@ -138,6 +143,7 @@ function deleteData(e) {
   console.log(e);
 }
 
+// 資料全部刪除
 function deletDataAll() {
   localStorage.removeItem('list');
   showList();
@@ -167,6 +173,8 @@ result.addEventListener('click', function (e) {
   // console.log(e);
   let classN = e.target.className;
   let reset = e.target.nodeName;
+
+  // 判斷監聽目標及後續動作
   if (reset === "IMG") {
     height.value = '';
     weight.value = '';
